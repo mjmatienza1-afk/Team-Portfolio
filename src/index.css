@@ -1,0 +1,15 @@
+/* src/index.css */
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background-color: #050505; /* CORE // SYSTEMS dark base */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

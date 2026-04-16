@@ -1,0 +1,111 @@
+/* src/components/Achievements.css */
+
+.achievements-section {
+  /* Removed fixed max-width/margin to inherit from global container */
+  padding: 60px 0;
+  width: 100%;
+}
+
+.section-tag {
+  font-family: 'Courier New', monospace;
+  color: #27c93f; /* CORE GREEN */
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 10px 0 40px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 15px; /* Tighter gap for technical look */
+}
+
+.achievement-node {
+  height: 100%;
+}
+
+.achievement-inner {
+  background: #0a0a0a; /* Deep Black */
+  border: 1px solid #1a1a1a;
+  border-left: 3px solid #1a1a1a; /* Thick left edge for "Log Entry" vibe */
+  border-radius: 0; /* Sharp corners */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.2s ease-in-out;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scanline hover effect */
+.achievement-inner:hover {
+  background: #0d0d0d;
+  border-color: #27c93f;
+  border-left-color: #27c93f;
+  transform: translateX(5px); /* Slide right instead of floating up */
+}
+
+.achievement-badge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(39, 201, 63, 0.2);
+  border-radius: 0; /* Square badges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #27c93f;
+}
+
+.medal-icon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 5px rgba(39, 201, 63, 0.5));
+}
+
+.achievement-content {
+  flex-grow: 1;
+}
+
+.achievement-text {
+  color: #d1d1d1;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Subtle "Timestamp" or Prefix effect */
+.achievement-text::before {
+  content: "> ";
+  color: #27c93f;
+  font-weight: bold;
+}
+
+.achievement-inner:hover .achievement-text {
+  color: #ffffff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-inner:hover {
+    transform: none; /* Disable slide on mobile to prevent horizontal scroll */
+    border-color: #27c93f;
+  }
+}

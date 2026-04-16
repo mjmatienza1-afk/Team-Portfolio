@@ -1,0 +1,88 @@
+/* src/Portfolio.css */
+
+/* 1. THE WRAPPER - Force black background and centering */
+
+* {
+  box-sizing: border-box;
+}
+
+body #root .portfolio-wrapper {
+  background-color: #050505 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* This is what centers the content */
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2. THE NAVBAR - Force it to IGNORE the center and touch the sides */
+body #root .navbar {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: fixed !important;
+  background: #050505 !important;
+  border-bottom: 1px solid #27c93f !important;
+}
+
+body #root .nav-inner {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 50px !important; /* Distance of tabs from edges */
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* 3. THE CONTAINER - Force it to be NARROW and CENTERED */
+body #root .container {
+  width: 100% !important;
+  max-width: 1000px !important; /* Content will NOT go wider than this */
+  margin: 0 auto !important;    /* Forces it to the middle */
+  padding: 100px 20px 0 20px !important;
+  display: block !important;
+}
+
+/* 4. THE VISUALS - Core // Systems Blending */
+body #root h2::before {
+  content: "ACCESSING_SUB_MODULE_v2.0 //" !important;
+  color: #27c93f !important;
+  font-family: monospace !important;
+  display: block !important;
+  font-size: 0.7rem !important;
+}
+
+body #root [class*="card"], 
+body #root [class*="box"], 
+body #root [class*="node"] {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  max-width: 100% !important; /* Prevent cards from stretching the container */
+}
+
+/* --- THE SYSTEM SCANLINE OVERLAY --- */
+
+.portfolio-wrapper::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  
+  /* The CRT texture: 
+     - 1st gradient creates the horizontal scanlines 
+     - 2nd gradient creates the subtle RGB subpixel vertical tint 
+  */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+  
+  /* Scanline height and vertical strip width */
+  background-size: 100% 4px, 3px 100%;
+  
+  z-index: 9999; /* Higher than your components to overlay the texture */
+  pointer-events: none; /* Allows you to still click buttons underneath */
+  opacity: 0.8; /* Adjust this to make the effect more or less subtle */
+}

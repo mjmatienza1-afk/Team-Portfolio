@@ -1,0 +1,158 @@
+/* src/components/Projects.css */
+.projects-section {
+  /* Removed fixed max-width/margin to inherit from global container */
+  width: 100%;
+  padding: 60px 0;
+}
+
+.section-tag {
+  font-family: 'Courier New', monospace;
+  color: #27c93f;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 10px 0 40px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 15px; /* Tighter, more technical grid */
+}
+
+.project-card {
+  background: #0a0a0a !important; /* Deep Black */
+  border-radius: 0; /* Sharp Edges */
+  padding: 45px;
+  border: 1px solid #1a1a1a !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: scale(1.02); /* Slight "pop" towards user */
+  border-color: #27c93f !important;
+  background: #0d0d0d !important;
+  box-shadow: 0 0 20px rgba(39, 201, 63, 0.1);
+}
+
+/* Add a "System Status" light to each card */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 4px;
+  height: 4px;
+  background: #1a1a1a;
+  border-radius: 50%;
+}
+
+.project-card:hover::before {
+  background: #27c93f;
+  box-shadow: 0 0 5px #27c93f;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  color: #666;
+}
+
+.icon-link {
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.icon-link:hover {
+  color: #27c93f;
+  transform: translateY(-2px);
+}
+
+.project-card-title {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project-card-description {
+  color: #a0a0a0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Courier New', monospace;
+}
+
+.project-card-footer {
+  margin-top: auto; /* Pushes stack to bottom */
+  padding-top: 25px;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.project-tech-stack li {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #27c93f;
+  background: rgba(39, 201, 63, 0.05);
+  padding: 2px 6px;
+  border: 1px solid rgba(39, 201, 63, 0.1);
+}
+
+/* Repository Access - Command Line Style */
+.repo-access {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 15px;
+}
+
+.repo-access a {
+  text-decoration: none;
+  color: #27c93f;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.repo-access a::before {
+  content: "CMD>";
+  font-weight: bold;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.repo-access a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .project-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 20px; }
+}

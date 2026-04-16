@@ -1,0 +1,163 @@
+/* src/components/Hero.css */
+.hero-viewport {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #050505; /* Pure Deep Black */
+}
+
+/* Engineering Grid Background - CORE GREEN VERSION */
+.hero-background-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(39, 201, 63, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(39, 201, 63, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px; /* Tighter grid */
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  max-width: 850px; /* Restrained for terminal feel */
+  background: rgba(5, 5, 5, 0.95);
+  border: 1px solid #1a1a1a;
+  border-radius: 0; /* Sharp Edges */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  backdrop-filter: blur(5px);
+}
+
+/* Terminal Styling */
+.terminal-bar {
+  background: #0a0a0a;
+  padding: 10px 15px;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+}
+
+/* Grayscale dots for a more serious technical look */
+.control-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  background: #222; /* Desaturated dots */
+}
+/* Keep the expand dot green to hint at "Active System" */
+.expand { background: #27c93f; opacity: 0.6; }
+
+.terminal-tab {
+  margin-left: 15px;
+  font-family: 'Courier New', monospace;
+  color: #444;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-main {
+  padding: 80px 60px;
+  text-align: left;
+}
+
+.hero-badge {
+  font-family: 'Courier New', monospace;
+  color: #27c93f;
+  background: transparent;
+  border: 1px solid rgba(39, 201, 63, 0.3);
+  padding: 4px 10px;
+  border-radius: 0;
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* The Banger Name Effect */
+.hero-glitch-name {
+  font-size: clamp(32px, 7vw, 64px);
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.hero-typing-container {
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+  color: #27c93f;
+  font-size: clamp(14px, 2vw, 18px);
+  text-transform: uppercase;
+}
+
+.hero-mission {
+  color: #a0a0a0;
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Action Buttons */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.cta-primary {
+  background: #27c93f;
+  border: 1px solid #27c93f;
+  color: #000 !important; /* High contrast black text */
+  padding: 15px 30px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-primary:hover {
+  background: transparent;
+  color: #27c93f !important;
+  box-shadow: 0 0 15px rgba(39, 201, 63, 0.3);
+}
+
+.cta-secondary {
+  color: #666;
+  border: 1px solid transparent;
+  padding: 15px 30px;
+  font-family: 'Courier New', monospace;
+  text-decoration: none;
+  transition: 0.2s;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cta-secondary:hover {
+  color: #27c93f;
+  border-color: rgba(39, 201, 63, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-main { padding: 30px 20px; }
+  .hero-actions { flex-direction: column; }
+  .cta-primary, .cta-secondary { text-align: center; }
+  .hero-glitch-name { font-size: 40px; }
+}

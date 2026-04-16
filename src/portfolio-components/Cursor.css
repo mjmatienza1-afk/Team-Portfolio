@@ -1,0 +1,26 @@
+/* src/components/Cursor.css */
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); /* Centers the dot on the mouse tip */
+  pointer-events: none; /* VERY IMPORTANT: allows you to click buttons 'through' the cursor */
+  z-index: 999999; /* Higher than everything else in your app */
+  border-radius: 50%;
+  opacity: 1; /* Ensure it's not hidden */
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #64ffda; /* Teal color */
+}
+
+.cursor-ring {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #64ffda;
+  transition: width 0.2s, height 0.2s; /* Smooth expansion on hover */
+}

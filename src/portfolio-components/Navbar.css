@@ -1,0 +1,128 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  background: transparent; /* Blends with Hero */
+}
+
+.navbar.scrolled {
+  background: rgba(5, 5, 5, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(39, 201, 63, 0.3); /* Green Divider */
+  padding: 0.6rem 0;
+}
+
+.nav-inner {
+  /* THE FIX: Remove the 1200px limit to let tabs reach the sides */
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0 40px; /* Breathe room from the literal glass edge */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Logo Brackets style */
+.logo-bracket { 
+  color: #27c93f; 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #666; /* Muted tech gray */
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+/* The Green Underline - BIOS style */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; 
+  left: 50%; 
+  right: 50%;
+  height: 2px;
+  background: #27c93f;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #27c93f !important;
+  text-shadow: 0 0 8px rgba(39, 201, 63, 0.4);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  left: 0; 
+  right: 0;
+}
+
+/* Hamburger - Technical "Menu" Toggle */
+.hamburger {
+  display: none;
+  background: none;
+  border: 1px solid #1a1a1a;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 1px; /* Thinner for technical look */
+  background: #27c93f;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; flex-direction: column; gap: 4px; }
+  .nav-inner { padding: 0 20px; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    right: 0;
+    flex-direction: column;
+    background: #0a0a0a;
+    border-bottom: 1px solid #27c93f;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-link { width: 100%; text-align: right; border-bottom: 1px solid #1a1a1a; }
+}

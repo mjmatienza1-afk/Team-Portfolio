@@ -1,0 +1,60 @@
+/* src/components/Footer.css */
+
+.footer {
+  width: 100%;
+  padding: 80px 0 40px 0;
+  background-color: #050505;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__inner {
+  text-align: center;
+}
+
+.footer__name {
+  font-family: 'Courier New', monospace;
+  color: #ffffff;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer__tagline {
+  font-family: 'Courier New', monospace;
+  color: #27c93f; /* CORE GREEN */
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  margin: 10px 0 30px 0;
+  opacity: 0.8;
+}
+
+.footer__divider {
+  width: 30px;
+  height: 1px;
+  background: #27c93f;
+  margin: 0 auto 20px auto;
+  opacity: 0.3;
+}
+
+.footer__copy {
+  font-family: 'Courier New', monospace;
+  color: #444;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer__status {
+  color: #27c93f;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(39, 201, 63, 0.3);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px;
+  }
+}

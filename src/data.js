@@ -71,6 +71,7 @@ export const designData = {
     {
       title: "Git Frontend Lab",
       description: "Practiced version control, repository management, and collaborative development structure.",
+      link2: "https://marque.pythonanywhere.com/",
       link: "https://github.com/AshtonValenzuela0609/git-frontend-project",
       tech: ["Git", "GitHub", "HTML"],
     },

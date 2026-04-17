@@ -42,7 +42,7 @@ const About = ({ data }) => {
         <div className="about-visual-stack">
           <div className="profile-frame">
             {/* Uses the image from data.js if available, otherwise defaults to MyPhoto */}
-            <img src={data.profileImage || MyPhoto} alt={data.name} className="profile-img-large" />
+            <img src={data.profileImage} alt={data.name} className="profile-img-large" />
             <div className="frame-border"></div>
           </div>
 

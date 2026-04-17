@@ -125,8 +125,10 @@
 
 /* Repository Access - Command Line Style */
 .repo-access {
+  display: flex;
   border-top: 1px solid #1a1a1a;
   padding-top: 15px;
+  gap: 15px;
 }
 
 .repo-access a {
@@ -150,6 +152,12 @@
 
 .repo-access a:hover {
   text-decoration: underline;
+}
+
+.profile-img-large {
+  height: 430px; /* Keep this the same as width for a perfect square/circle */
+  object-fit: cover; /* This stops the image from stretching! */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a nice little shadow */
 }
 
 @media (max-width: 768px) {

@@ -86,7 +86,7 @@ const Navbar = ({ data }) => {
                 className={`nav-link ${active === link ? "active" : ""}`}
                 onClick={() => scrollTo(link)}
               >
-                {link === "Home" ? `[ ${link} ]` : link}
+                {link}
               </button>
             </li>
           ))}

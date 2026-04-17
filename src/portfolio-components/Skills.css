@@ -83,10 +83,11 @@
   cursor: crosshair; /* Technical cursor */
 }
 
+/* 🚀 CHANGED: Added !important tags to override global dark mode rules */
 .skill-tag:hover {
-  border-color: #27c93f;
-  color: #27c93f;
-  background: #0d0d0d;
+  border-color: #27c93f !important;
+  color: #27c93f !important;
+  background: #0d0d0d !important;
 }
 
 .skill-bullet {
@@ -97,9 +98,10 @@
   opacity: 0.3;
 }
 
+/* 🚀 CHANGED: Added !important tags here too for the glowing bullet */
 .skill-tag:hover .skill-bullet {
-  opacity: 1;
-  box-shadow: 0 0 5px #27c93f;
+  opacity: 1 !important;
+  box-shadow: 0 0 5px #27c93f !important;
 }
 
 /* Mobile Adjustments */

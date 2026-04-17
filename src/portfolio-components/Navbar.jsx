@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // IMPORT ROUTER NAVIGATION
+import { useNavigate } from "react-router-dom"; 
 import "./Navbar.css";
 
 const links = ["Home", "About", "Education", "Experience", "Projects", "Skills", "Achievements", "Contact"];
@@ -44,7 +44,7 @@ const Navbar = ({ data }) => {
 
   const scrollTo = (linkName) => {
     if (linkName === "Home") {
-      // 🚀 USE REACT ROUTER TO SEAMLESSLY GO BACK TO YOUR MAIN APP.JSX HOME
+      // Navigates back to the main App.jsx home
       navigate("/");
     } else {
       const targetId = linkName.toLowerCase();
@@ -73,7 +73,13 @@ const Navbar = ({ data }) => {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-inner">
-        <div className="nav-logo" onClick={() => scrollTo("Home")}>
+        
+        {/* 🚀 CHANGED: Scrolls to the top of the current portfolio page */}
+        <div 
+          className="nav-logo" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{ cursor: 'pointer' }}
+        >
           <span className="logo-bracket">[</span>
           <span className="logo-text">{getInitials(data?.name)}</span>
           <span className="logo-bracket">]</span>

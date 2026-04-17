@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
-// REMOVED: import { data } from '../data';
 
 const Contact = ({ data }) => {
   // Pulling contact and socials from the passed data prop
   const contact = data?.contact;
   const socials = data?.socials;
 
+  // State to track if the email was copied
+  const [copied, setCopied] = useState(false);
+
   // Safety check to prevent crashing if data is missing
   if (!contact || !socials) return null;
+
+  // The function to copy the email to the clipboard
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(contact.email);
+    setCopied(true);
+    
+    // Reset back to the email address after 2 seconds
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <section id="contact" className="section-container">
@@ -31,13 +42,20 @@ const Contact = ({ data }) => {
             </div>
             <div className="meta-item">
               <span className="meta-label">Encrypted Mail</span>
-              <a href={`mailto:${contact.email}`} className="meta-value email-hover">
-                {contact.email}
-              </a>
+              {/* CHANGED: This is now a clickable span that copies the email! */}
+              <span 
+                onClick={handleCopyEmail} 
+                className="meta-value email-hover"
+                style={{ cursor: 'pointer', color: copied ? '#27c93f' : '' }}
+                title="Click to copy"
+              >
+                {copied ? "COPIED TO CLIPBOARD //" : contact.email}
+              </span>
             </div>
           </div>
 
           <div className="cta-wrapper">
+            {/* KEPT: This remains the classic mailto: link for the big button */}
             <a href={`mailto:${contact.email}`} className="main-cta-button">
               Execute "Say Hello"
             </a>

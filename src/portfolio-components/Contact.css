@@ -93,7 +93,12 @@
 
 /* The Terminal-Style Button */
 .cta-wrapper {
+  display: flex;
+  margin-top: 30px;
   margin-bottom: 50px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-cta-button {

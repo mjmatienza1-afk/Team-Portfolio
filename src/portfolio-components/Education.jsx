@@ -23,7 +23,6 @@ const Education = ({ data }) => {
               <span className="edu-date-pill">{edu.duration}</span>
               <div className="status-indicator">
                 <span className="pulse-ring"></span>
-                <span className="status-label">Verified</span>
               </div>
             </div>
             

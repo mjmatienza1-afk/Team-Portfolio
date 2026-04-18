@@ -66,19 +66,49 @@
 .submit-btn:disabled { background: rgba(255, 95, 86, 0.05) !important; color: #ff5f56 !important; border: 1px dashed #ff5f56 !important; cursor: not-allowed !important; box-shadow: none !important; opacity: 0.8; }
 
 /* RSVP Mobile Resposive Overrides */
+/* RSVP Mobile Responsive Overrides */
 @media (max-width: 768px) {
   .details-grid { grid-template-columns: 1fr; }
   .couple-names { font-size: 2.5rem; }
   .rsvp-body-container { padding: 15px 10px; }
   .invitation-prompt { font-size: 1.6rem; }
   .status-line { font-size: 0.55rem; margin-bottom: 15px; }
-  .rsvp-scroll-wrapper { height: 75vh; min-height: unset; max-height: none; padding-bottom: 50px; }
-  .terminal-input { padding: 8px; font-size: 0.85rem; }
+
+  /* 1. Disable jumpy snapping on mobile for smooth scrolling */
+  .rsvp-scroll-wrapper { 
+    height: 75vh; 
+    min-height: unset; 
+    max-height: none; 
+    padding-bottom: 50px; 
+    scroll-snap-type: none !important; 
+    overflow-y: auto !important;
+  }
+
+  .scroll-slide {
+    scroll-snap-align: none !important;
+    min-height: auto !important;
+    padding: 30px 0 !important;
+  }
+
+  /* 2. STOP THE BLUR: Keep slides sharp on mobile */
+  .inactive-slide {
+    opacity: 1 !important;
+    filter: blur(0px) !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  /* 3. Terminal Input Fix: Prevent iOS auto-zoom */
+  .terminal-input { 
+    padding: 10px; 
+    font-size: 16px !important; 
+  }
+
   .radio-group label { font-size: 0.8rem; }
   .detail-card { padding: 15px; }
   .form-group label { font-size: 0.75rem; }
-  /* Fixes tall slides (like Phase 4) bleeding out and blurring on mobile */
-  /* THE UPDATED SLIDE LABEL FIX */
+
+  /* 4. THE UPDATED SLIDE LABEL FIX: Center and wrap long titles */
   body #root .slide-label {
     display: flex !important;
     flex-direction: column !important; 
@@ -87,10 +117,9 @@
     width: 100% !important;
     gap: 4px !important; 
     margin: 0 auto 20px auto !important;
-    white-space: normal !important; /* FIX: Allows long titles to wrap again! */
-    word-break: break-word !important; /* Prevents long words from bleeding out */
-    letter-spacing: 3px !important; /* Slightly tighter spacing so more text fits */
+    white-space: normal !important; 
+    word-break: break-word !important; 
+    letter-spacing: 3px !important; 
     text-align: center !important;
   }
-  
 }

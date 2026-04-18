@@ -155,7 +155,19 @@
 }
 
 /* Mobile Responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .hero-viewport {
+    align-items: flex-start; /* Stops it from centering behind the navbar */
+    padding-top: 120px; /* Pushes everything down into the safe zone */
+  }
+  
+  .hero-status {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 12px; /* Makes sure it fits nicely on smaller screens */
+  }
+
   .hero-main { padding: 30px 20px; }
   .hero-actions { flex-direction: column; }
   .cta-primary, .cta-secondary { text-align: center; }

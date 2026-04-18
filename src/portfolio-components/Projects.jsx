@@ -58,12 +58,12 @@ const Projects = ({ data }) => {
                 <div className="repo-access">
                   <div>
                     <a href={project.link} target="_blank" rel="noreferrer">
-                      Source Code <span className="arrow">→</span>
+                      Source Code →
                     </a>
                   </div>
                   <div>
                     <a href={project.link2} target="_blank" rel="noreferrer" >
-                      Website <span className="arrow">→</span>
+                      Website →
                     </a>
                   </div>
                 </div>

@@ -77,4 +77,9 @@
   .radio-group label { font-size: 0.8rem; }
   .detail-card { padding: 15px; }
   .form-group label { font-size: 0.75rem; }
+  .slide-label { 
+    font-size: 0.55rem; 
+    letter-spacing: 2px; /* Pulls the letters closer together so it fits */
+    margin-bottom: 10px;
+  }
 }

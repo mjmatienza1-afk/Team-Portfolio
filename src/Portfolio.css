@@ -156,8 +156,38 @@ body #root .portfolio-wrapper .skill-tag:hover .skill-bullet {
     margin-bottom: 15px !important;
     font-size: 11px !important;
   }
+  /* --- Portfolio Loader Mobile Refinement --- */
+  .extraction-box {
+    width: 85% !important; /* Fits nicely on narrow screens */
+    padding: 30px 20px !important;
+    border-radius: 4px;
+  }
 
-  /* 2. FIX THE RSVP SCROLL TEXT SQUISH */
+  .extraction-text {
+    font-family: monospace;
+    font-size: 0.8rem !important; /* Scaled down for mobile */
+    color: #fff;
+    letter-spacing: 2px !important;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1.6;
+  }
+
+  /* The dynamic role [ENGINEER, etc] */
+  .extraction-text span {
+    color: #27c93f; /* Terminal Green */
+    font-weight: bold;
+    display: inline-block; /* Prevents awkward breaks */
+  }
+
+  .sub-text {
+    font-family: monospace;
+    font-size: 0.6rem !important;
+    color: #444 !important;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
   /* 2. THE BULLETPROOF RSVP SCROLL FIX */
   body #root .slide-label {
     display: flex !important;

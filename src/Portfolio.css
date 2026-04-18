@@ -61,31 +61,6 @@ body #root [class*="node"] {
   max-width: 100% !important; /* Prevent cards from stretching the container */
 }
 
-/* --- THE SYSTEM SCANLINE OVERLAY --- */
-
-.portfolio-wrapper::before {
-  content: " ";
-  display: block;
-  position: fixed;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
-  right: 0;
-  
-  /* The CRT texture: 
-     - 1st gradient creates the horizontal scanlines 
-     - 2nd gradient creates the subtle RGB subpixel vertical tint 
-  */
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-              linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
-  
-  /* Scanline height and vertical strip width */
-  background-size: 100% 4px, 3px 100%;
-  /* 👇 THESE ARE THE LINES THAT WERE MISSING 👇 */
-  z-index: 9999; 
-  pointer-events: none; /* This lets your mouse "pass through" the glass */
-}
-
 /* --- 5. PORTFOLIO DATA EXTRACTION LOADER --- */
 .portfolio-loader {
   position: fixed;

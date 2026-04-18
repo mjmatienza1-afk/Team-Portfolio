@@ -66,15 +66,17 @@
 .footer { padding: 60px; text-align: center; color: #222; font-size: 0.6rem; letter-spacing: 4px; }
 
 .school-description {
-  margin-top: 15px;
-  font-family: 'Courier New', monospace; /* Keeps the terminal look */
+  margin-top: 20px;
+  font-family: 'Courier New', monospace;
   font-size: 14px;
-  color: #a0a0a0; /* Muted grey so it doesn't overpower the title */
+  color: #a0a0a0;
   line-height: 1.6;
-  border-left: 2px solid #27c93f; /* Adds a nice green hacker accent line */
-  padding-left: 15px;
-  background: rgba(255, 255, 255, 0.02); /* Slight highlight */
+  border-left: 2px solid #27c93f;
+  background: rgba(255, 255, 255, 0.02);
   padding: 10px 10px 10px 15px;
+  text-align: left; /* FIX: Prevents text from centering */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* --- MOBILE RESPONSIVE FIXES --- */
@@ -83,10 +85,30 @@
   .school-container { flex-direction: column; text-align: center; padding: 40px 20px; }
   .envelope-wrapper { width: 90vw; height: 220px; }
   .envelope .flap { border-left-width: 45vw; border-right-width: 45vw; border-top-width: 120px; }
-  body #root .school-description {
-    font-size: 12px !important; /* Scales down the terminal text for small screens */
-    padding: 8px 8px 8px 12px !important; /* Tightens the box so it doesn't squish the text */
-    margin-top: 12px !important; /* Brings it slightly closer to the tags */
-    line-height: 1.5 !important;
+  
+  /* Centers the BATCH tags so they don't look lopsided */
+  .school-metadata { 
+  display: flex; 
+  gap: 12px; 
+  margin-top: 20px; 
+  flex-wrap: wrap; /* FIX 1: Allows the tags to drop to the next line if cramped */
+}
+
+.school-metadata span { 
+  font-size: 0.7rem; 
+  color: #aaa; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 4px 12px; 
+  font-family: monospace; 
+  max-width: 100%; /* Prevents the tag from ever being wider than its container */
+  word-break: break-word; /* FIX 2: Forces the long text to stay inside the border */
+  box-sizing: border-box; 
+}
+
+  /* Mobile Terminal Text Fix */
+  .school-description {
+    font-size: 12px !important;
+    padding: 10px 10px 10px 12px !important;
+    margin-top: 15px !important;
   }
 }

@@ -129,8 +129,11 @@ export default function Home() {
           <div className="school-visual"><div className="origin-icon">◈</div></div>
           <div className="school-details">
             <span className="subtitle">INSTITUTIONAL ORIGIN //</span>
-            <h2>University of the Philippines</h2>
-            <div className="school-metadata"><span>BATCH_2026</span><span>PH_REGION_IV</span></div>
+            <h2>Technological Institute of the Philippines</h2>
+            <div className="school-metadata"><span>BATCH_2026</span><span>PH_NATIONAL_CAPITAL_REGION</span></div>
+            <p className="school-description">
+              &gt; SYSTEM_LOG: A premier engineering and computing institution focused on technological innovation. Serving as the primary training ground for next-generation developers, system architects, and engineers.
+            </p>
           </div>
         </div>
       </section>

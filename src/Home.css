@@ -65,6 +65,18 @@
 @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .footer { padding: 60px; text-align: center; color: #222; font-size: 0.6rem; letter-spacing: 4px; }
 
+.school-description {
+  margin-top: 15px;
+  font-family: 'Courier New', monospace; /* Keeps the terminal look */
+  font-size: 14px;
+  color: #a0a0a0; /* Muted grey so it doesn't overpower the title */
+  line-height: 1.6;
+  border-left: 2px solid #27c93f; /* Adds a nice green hacker accent line */
+  padding-left: 15px;
+  background: rgba(255, 255, 255, 0.02); /* Slight highlight */
+  padding: 10px 10px 10px 15px;
+}
+
 /* --- MOBILE RESPONSIVE FIXES --- */
 @media (max-width: 768px) {
   .manifest-grid { grid-template-columns: 1fr; }

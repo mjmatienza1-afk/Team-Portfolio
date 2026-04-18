@@ -94,7 +94,7 @@ const handleScroll = (e) => {
 
           <div className="status-line" style={{marginBottom: '10px', color: '#27c93f', fontFamily: 'monospace', display: 'flex', justifyContent: 'space-between', position: 'relative', zIndex: 2}}>
             <span><span className="blink">●</span> SYSTEM_READY: DEPLOYMENT_PHASE_0{currentSlide}</span>
-            <span style={{opacity: 0.6, fontSize: '0.85rem'}}>// SCROLL TO NAVIGATE ↓</span>
+            <span style={{opacity: 0.6, fontSize: '0.85rem'}}>// SCROLL TO <br /> NAVIGATE ↓</span>
           </div>
 
           <form onSubmit={handleSubmit} className="tab-content-area rsvp-scroll-wrapper" onScroll={handleScroll} style={{ position: 'relative', zIndex: 2 }}>

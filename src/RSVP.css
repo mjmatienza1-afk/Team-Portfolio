@@ -77,9 +77,13 @@
   .radio-group label { font-size: 0.8rem; }
   .detail-card { padding: 15px; }
   .form-group label { font-size: 0.75rem; }
+  /* 👇 THE ULTIMATE ANTI-SQUISH WEAPON 👇 */
   .slide-label { 
-    font-size: 0.55rem; 
-    letter-spacing: 2px; /* Pulls the letters closer together so it fits */
-    margin-bottom: 10px;
+    font-size: 9px !important; 
+    letter-spacing: 1px !important; 
+    white-space: nowrap !important; /* Prevents text from breaking into two lines */
+    width: 100% !important;
+    margin-bottom: 10px !important;
+    display: block !important;
   }
 }

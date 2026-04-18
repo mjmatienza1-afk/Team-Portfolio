@@ -163,4 +163,19 @@
 @media (max-width: 768px) {
   .project-grid { grid-template-columns: 1fr; }
   .project-card { padding: 20px; }
+
+  /* 👇 THE ANTI-MONSTER LINK FIX 👇 */
+  /* We use body #root so Portfolio.css can't override it */
+  body #root .repo-access a {
+    justify-content: flex-start !important; /* Forces the arrow to sit next to the text */
+    width: fit-content !important; /* Stops the button from stretching across the screen */
+    margin-right: 15px !important; /* Keeps "Source Code" and "Website" from touching */
+  }
+
+  /* Optional: If "Source Code" and "Website" are squishing side-by-side, 
+     this forces them to stack neatly on top of each other on tiny screens */
+  body #root .repo-access {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
 }

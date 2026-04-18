@@ -165,3 +165,31 @@ body #root .portfolio-wrapper .skill-tag:hover .skill-bullet {
   box-shadow: 0 0 8px #27c93f !important;
   background: #27c93f !important;
 }
+
+/* --- 7. MOBILE SPECIFICITY OVERRIDES --- */
+/* These use body #root to guarantee they beat the desktop styles on phones */
+
+@media (max-width: 768px) {
+  /* 1. FIX THE HERO NAVBAR OVERLAP */
+  body #root .hero-viewport {
+    align-items: flex-start !important; /* Overrides the center alignment */
+    padding-top: 130px !important; /* Forces a safe zone for the navbar */
+  }
+  
+  body #root .hero-status {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    font-size: 11px !important;
+  }
+
+  /* 2. FIX THE RSVP SCROLL TEXT SQUISH */
+  body #root .slide-label {
+    font-size: 9px !important; 
+    letter-spacing: 1px !important; 
+    white-space: nowrap !important; /* ABSOLUTELY forbids wrapping to a second line */
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+  }
+}

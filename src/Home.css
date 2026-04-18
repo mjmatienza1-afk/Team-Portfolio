@@ -83,4 +83,10 @@
   .school-container { flex-direction: column; text-align: center; padding: 40px 20px; }
   .envelope-wrapper { width: 90vw; height: 220px; }
   .envelope .flap { border-left-width: 45vw; border-right-width: 45vw; border-top-width: 120px; }
+  body #root .school-description {
+    font-size: 12px !important; /* Scales down the terminal text for small screens */
+    padding: 8px 8px 8px 12px !important; /* Tightens the box so it doesn't squish the text */
+    margin-top: 12px !important; /* Brings it slightly closer to the tags */
+    line-height: 1.5 !important;
+  }
 }

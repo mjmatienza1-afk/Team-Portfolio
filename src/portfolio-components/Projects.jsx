@@ -61,11 +61,14 @@ const Projects = ({ data }) => {
                       Source Code →
                     </a>
                   </div>
-                  <div>
-                    <a href={project.link2} target="_blank" rel="noreferrer" >
-                      Website →
-                    </a>
-                  </div>
+                  
+                  {project.link2 && (
+                    <div>
+                      <a href={project.link2} target="_blank" rel="noreferrer">
+                        Website →
+                      </a>
+                    </div>
+                  )}
                 </div>
               </footer>
             </div>

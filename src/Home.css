@@ -85,7 +85,20 @@
   .school-container { flex-direction: column; text-align: center; padding: 40px 20px; }
   .envelope-wrapper { width: 90vw; height: 220px; }
   .envelope .flap { border-left-width: 45vw; border-right-width: 45vw; border-top-width: 120px; }
-  
+
+  .terminal-body {
+    padding: 30px 20px !important; 
+  }
+
+  /* 2. Scale the header so "TECHNOLOGICAL" fits comfortably */
+  .terminal-body h2 {
+    font-size: 1.3rem !important;
+    letter-spacing: 2px !important; /* Tighter spacing for mobile only */
+    line-height: 1.4 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
   /* Centers the BATCH tags so they don't look lopsided */
   .school-metadata { 
     display: flex; 

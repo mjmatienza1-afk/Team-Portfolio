@@ -71,7 +71,6 @@ export default function Home() {
       <section className="about-section">
         <div className="terminal-window">
           <div className="terminal-header">
-            <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
             <p>ROOT@CORE_SYSTEMS: ~ /MISSION</p>
           </div>
           <div className="terminal-body">
@@ -88,7 +87,6 @@ export default function Home() {
       <section className="about-section">
         <div className="terminal-window">
           <div className="terminal-header">
-            <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
             <p>ROOT@CORE_SYSTEMS: ~ /PROTOCOLS</p>
           </div>
           <div className="terminal-body">

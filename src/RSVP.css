@@ -78,11 +78,19 @@
   .detail-card { padding: 15px; }
   .form-group label { font-size: 0.75rem; }
   /* Fixes tall slides (like Phase 4) bleeding out and blurring on mobile */
-  .scroll-slide { 
-    justify-content: flex-start !important; 
-    height: auto !important;
-    padding-top: 10px !important; 
-    padding-bottom: 40px !important; 
+  /* THE UPDATED SLIDE LABEL FIX */
+  body #root .slide-label {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important; 
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 4px !important; 
+    margin: 0 auto 20px auto !important;
+    white-space: normal !important; /* FIX: Allows long titles to wrap again! */
+    word-break: break-word !important; /* Prevents long words from bleeding out */
+    letter-spacing: 3px !important; /* Slightly tighter spacing so more text fits */
+    text-align: center !important;
   }
   
 }

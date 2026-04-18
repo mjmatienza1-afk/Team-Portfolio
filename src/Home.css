@@ -88,27 +88,30 @@
   
   /* Centers the BATCH tags so they don't look lopsided */
   .school-metadata { 
-  display: flex; 
-  gap: 12px; 
-  margin-top: 20px; 
-  flex-wrap: wrap; /* FIX 1: Allows the tags to drop to the next line if cramped */
-}
+    display: flex; 
+    gap: 12px; 
+    margin-top: 20px; 
+    flex-wrap: wrap; /* Allows the tags to drop to the next line if cramped */
+    justify-content: center !important; /* Forces the wrapping tags to sit in the center */
+  }
 
-.school-metadata span { 
-  font-size: 0.7rem; 
-  color: #aaa; 
-  border: 1px solid rgba(255, 255, 255, 0.1); 
-  padding: 4px 12px; 
-  font-family: monospace; 
-  max-width: 100%; /* Prevents the tag from ever being wider than its container */
-  word-break: break-word; /* FIX 2: Forces the long text to stay inside the border */
-  box-sizing: border-box; 
-}
+  .school-metadata span { 
+    font-size: 0.7rem; 
+    color: #aaa; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 4px 12px; 
+    font-family: monospace; 
+    max-width: 100%; /* Prevents the tag from ever being wider than its container */
+    word-break: break-word; /* Forces the long text to stay inside the border */
+    box-sizing: border-box; 
+  }
 
   /* Mobile Terminal Text Fix */
   .school-description {
     font-size: 12px !important;
     padding: 10px 10px 10px 12px !important;
-    margin-top: 15px !important;
+    width: 90% !important; /* Pulls the green line inward off the wall */
+    margin: 15px auto 0 auto !important; /* Centers the whole box on the screen */
+    text-align: left !important; /* Ensures the terminal text inside stays left-aligned */
   }
 }

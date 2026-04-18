@@ -183,13 +183,21 @@ body #root .portfolio-wrapper .skill-tag:hover .skill-bullet {
   }
 
   /* 2. FIX THE RSVP SCROLL TEXT SQUISH */
+  /* 2. THE BULLETPROOF RSVP SCROLL FIX */
   body #root .slide-label {
-    font-size: 9px !important; 
-    letter-spacing: 1px !important; 
-    white-space: nowrap !important; /* ABSOLUTELY forbids wrapping to a second line */
-    display: block !important;
-    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important; /* Forces them to stack on top of each other */
+    align-items: center !important; /* Centers them horizontally */
+    justify-content: center !important;
     width: 100% !important;
-    margin-bottom: 15px !important;
+    gap: 4px !important; /* The exact spacing between the top and bottom text */
+    margin: 0 auto 20px auto !important;
+    white-space: nowrap !important; /* Prevents individual lines from breaking */
+  }
+
+  body #root .slide-label span {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+    color: #a0a0a0 !important; /* Adjust if your color is different */
   }
 }

@@ -192,12 +192,14 @@ export const designData = {
     {
       title: "Git Frontend Lab",
       description: "Practiced version control, repository management, and collaborative development structure.",
+      link2: "https://git-frontend-project.vercel.app/",
       link: "https://github.com/AshtonValenzuela0609/git-frontend-project",
       tech: ["Git", "GitHub", "HTML"],
     },
     {
       title: "Interactive Login Dashboard",
       description: "Developed a responsive login interface with input validation and improved user interaction.",
+      link2: "https://la-3-2.vercel.app/",
       link: "https://github.com/AshtonValenzuela0609/LA3.2-Interactive-Login-Dashboard",
       tech: ["JavaScript", "CSS", "UI/UX"],
     },
@@ -210,12 +212,14 @@ export const designData = {
     {
       title: "Student Enrollment Portal",
       description: "Designed a registration workflow with form handling and structured user navigation.",
+      link2: "https://la-3-3-designing-a-student-enrollme.vercel.app/",
       link: "https://github.com/AshtonValenzuela0609/LA3.3_Designing-a-Student-Enrollment-Portal",
       tech: ["Web Design", "Form Handling"],
     },
     {
       title: "Global State & API Integration",
       description: "Integrated APIs to fetch dynamic data and implemented global state management.",
+      link2: "https://la-4-global-state-api-integration-jsfunm8xr.vercel.app/",
       link: "https://github.com/AshtonValenzuela0609/LA4_Global-State-API-Integration",
       tech: ["API", "State Management", "Async JS"],
     },

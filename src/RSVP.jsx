@@ -104,7 +104,7 @@ const handleScroll = (e) => {
               <div className="invitation-text-block">
                   <span className="p-id mono-label">SYSTEM_ANNOUNCEMENT //</span>
                   <h2 className="invitation-prompt">CORE_SYSTEMS:<br/>You Are Invited.</h2>
-                  <p className="modal-subtitle text-center" style={{marginTop: '15px'}}>Protocol initialized. Attendance request confirmed for Anna <span className="mono-amp">&</span> Steve.</p>
+                  <p className="modal-subtitle text-center" style={{marginTop: '15px'}}>Protocol initialized. Attendance request confirmed for Inday <span className="mono-amp">&</span> BongBong.</p>
               </div>
             </div>
 

@@ -78,8 +78,8 @@ export const leadData = {
     {
       title: "Online Ordering System",
       description: "Developed a database-driven online ordering platform featuring complete user authentication, allowing customers to securely sign up, log in, and manage their orders.",
-      link2: "https://crypto-pulse-lyart.vercel.app/",
-      link: "https://github.com/mjmatienza1-afk/crypto-pulse",
+      link2: "https://marque.pythonanywhere.com/",
+      link: "https://github.com/mjmatienza1-afk/beerbonanza",
       tech: ["API", "State Management", "Async JS"],
     }
 

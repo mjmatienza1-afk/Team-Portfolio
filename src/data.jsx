@@ -80,7 +80,7 @@ export const leadData = {
       description: "Developed a database-driven online ordering platform featuring complete user authentication, allowing customers to securely sign up, log in, and manage their orders.",
       link2: "https://marque.pythonanywhere.com/",
       link: "https://github.com/mjmatienza1-afk/beerbonanza",
-      tech: ["API", "State Management", "Async JS"],
+      tech: ["Python", "Flask", "HTML","CSS","MySQL"],
     }
 
   ], 

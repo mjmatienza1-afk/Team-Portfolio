@@ -29,13 +29,13 @@ export const leadData = {
   },
   {
     school: "Occidental Mindoro State College",
-    location: "San Jose, Occidental Mindoro",
+    location: "Occidental Mindoro",
     duration: "2017-2022",
     details: "He completed his secondary education at this institution spanning for three years of face to face classes and a year of online classes. He also began his higher education studies at said institution. Still contemplating about his desires for the future, this serves as his initial exposure in advancing to the tertiary eduction level.",
   },
   {
     school: "Caminawtit Elementary School",
-    location: "San Jose, Occidental Mindoro",
+    location: "Occidental Mindoro",
     duration: "2011-2017",
     details: "This is where he studied for his primary education. Often times just hanging with friends and having fun like most kids do. This served as his first exposure to the real world with other people outside of his familial background."
   }

@@ -8,7 +8,7 @@ const Projects = ({ data }) => {
   return (
     <section id="projects" className="section-container">
       <div className="section-header">
-        <span className="section-tag">04. Innovations</span>
+        <span className="section-tag"><br/>04. Innovations</span>
         <h2 className="section-title">Technical Projects</h2>
       </div>
 

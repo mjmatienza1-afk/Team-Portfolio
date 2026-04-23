@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+// ❌ REMOVED: import { designData } from './data'; 
 
 const Contact = ({ data }) => {
   // Pulling contact and socials from the passed data prop
@@ -25,15 +26,17 @@ const Contact = ({ data }) => {
     <section id="contact" className="section-container">
       <div className="contact-container">
         <div className="contact-header">
-          <span className="section-tag">07. Connection</span>
+          <span className="section-tag"><br/>07. Connection</span>
           <h2 className="section-title">Get In Touch</h2>
         </div>
         
         <div className="contact-card">
+          
+          {/* 👇 FIXED: Now uses 'data.contactdetails' so it changes per profile 👇 */}
           <p className="contact-description">
-            I’m currently exploring new opportunities in <span className="highlight">Cybersecurity</span> and <span className="highlight">Full-Stack Development</span>. 
-            Whether you have a technical query or just want to connect, my inbox is always open for a system handshake.
+            {data.contactdetails}
           </p>
+          {/* 👆 ----------------------------------------------------------- 👆 */}
           
           <div className="contact-meta">
             <div className="meta-item">
@@ -42,7 +45,6 @@ const Contact = ({ data }) => {
             </div>
             <div className="meta-item">
               <span className="meta-label">Encrypted Mail</span>
-              {/* CHANGED: This is now a clickable span that copies the email! */}
               <span 
                 onClick={handleCopyEmail} 
                 className="meta-value email-hover"
@@ -55,7 +57,6 @@ const Contact = ({ data }) => {
           </div>
 
           <div className="cta-wrapper">
-            {/* KEPT: This remains the classic mailto: link for the big button */}
             <a href={`mailto:${contact.email}`} className="main-cta-button">
               Execute "Say Hello"
             </a>

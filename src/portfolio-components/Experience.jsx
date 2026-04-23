@@ -12,7 +12,7 @@ const Experience = ({ data }) => {
     /* CHANGED: className to "section-container" for global visibility fix */
     <section id="experience" className="section-container">
       <div className="section-header">
-        <span className="section-tag">03. Career Path</span>
+        <span className="section-tag"><br/>03. Career Path</span>
         <h2 className="section-title">Professional Milestones</h2>
       </div>
 
@@ -31,6 +31,7 @@ const Experience = ({ data }) => {
                 <div className="exp-title-group">
                   <h3 className="exp-role">{job.role}</h3>
                   <span className="exp-company">@ {job.company}</span>
+                  <span className ="details"> <br/> {job.details}</span>
                 </div>
                 {/* Note: Ensure your data.js uses "period" or change this to "duration" */}
                 <div className="exp-duration-tag">{job.period || job.duration}</div>

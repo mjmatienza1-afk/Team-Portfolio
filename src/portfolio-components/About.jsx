@@ -8,7 +8,7 @@ const About = ({ data }) => {
   return (
     <section id="about" className="section-container">
       <div className="section-header">
-        <span className="section-tag">01. Profile</span>
+        <span className="section-tag"> <br/> 01. Profile</span>
         <h2 className="section-title">Technical Biography</h2>
       </div>
 
@@ -16,15 +16,16 @@ const About = ({ data }) => {
         {/* Left Column: The Narrative (Now Dynamic) */}
         <div className="about-narrative">
           <p className="lead-text">
-            I am <span className="highlight">{data.name}</span>, a {data.role} building at the intersection of 
-            digital architecture and system security.
-          </p>
+            <span className="highlight">{data.name}</span>, a {data.role} at the {data.school}, {data.narrative}
+          </p>  
           
           <div className="bio-content">
             {/* This will now pull the unique 'about' text from data.js */}
             <p>{data.about}</p>
             {/* If you have a second paragraph in your data.js, you can map it here */}
+            <p className="bio-text">
             {data.bioExtended && <p>{data.bioExtended}</p>}
+            </p>
           </div>
 
           <div className="tech-pills">
@@ -49,26 +50,21 @@ const About = ({ data }) => {
           {/* System Status Card (Now Dynamic) */}
           <div className="about-stats-card">
             <div className="card-header">
-              <div className="dots">
-                <span className="dot red"></span>
-                <span className="dot yellow"></span>
-                <span className="dot green"></span>
-              </div>
               <span className="terminal-title">system_status.sh</span>
             </div>
             
             <div className="card-body">
               <div className="stat-item">
                 <label>Location</label>
-                <p>{data.location || "PH_REGION_IV"}</p>
+                <p>{data.location}</p>
               </div>
               <div className="stat-item">
                 <label>Institution</label>
-                <p>{data.institution || "CORE_SYSTEMS_INST"}</p>
+                <p>{data.school}</p>
               </div>
               <div className="stat-item">
-                <label>System Batch</label>
-                <p>{data.graduation || "2026"}</p>
+                <label>Expected Graduation</label>
+                <p>{data.graduation || "2028"}</p>
               </div>
             </div>
             

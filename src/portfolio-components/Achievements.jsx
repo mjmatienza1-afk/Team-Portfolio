@@ -12,7 +12,7 @@ const Achievements = ({ data }) => {
   return (
     <section id="achievements" className="section-container">
       <div className="section-header">
-        <span className="section-tag">06. Milestones</span>
+        <span className="section-tag"><br/>06. Milestones</span>
         <h2 className="section-title">Honor Roll & Certifications</h2>
       </div>
 

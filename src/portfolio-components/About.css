@@ -73,6 +73,7 @@
   border: 1px solid #1a1a1a;
   border-top: 4px solid #1a1a1a; /* Looks like a window title bar */
   position: relative;
+  margin-bottom: 15px;
 }
 
 .card-body {
@@ -118,6 +119,13 @@
   display: inline-block;
 }
 
+.bio-text{
+  white-space: pre-line;
+}
+
+.tech-pills{
+  margin-top: 20px;
+}
 /* Mobile Fix */
 @media (max-width: 900px) {
   .about-grid {

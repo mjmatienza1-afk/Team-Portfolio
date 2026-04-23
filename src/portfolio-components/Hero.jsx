@@ -35,7 +35,7 @@ const Hero = ({ data }) => {
           </h1>
           
           {/* Tagline */}
-          <h2 className="hero-role">&gt; {data.tagline || "Software Engineer"}</h2>
+          <h2 className="hero-role">{data.tagline}</h2>
 
           <p className="hero-mission">
             {data.description || "Architecting robust, scalable, and secure system modules. Ready for deployment."}

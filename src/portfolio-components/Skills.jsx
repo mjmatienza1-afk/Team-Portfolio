@@ -9,7 +9,7 @@ const Skills = ({ data }) => {
   return (
     <section id="skills" className="section-container">
       <div className="section-header">
-        <span className="section-tag">05. Capabilities</span>
+        <span className="section-tag"><br/>05. Capabilities</span>
         <h2 className="section-title">Technical & Professional Skills</h2>
       </div>
 

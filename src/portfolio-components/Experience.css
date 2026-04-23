@@ -1,6 +1,5 @@
 /* src/components/Experience.css */
 .experience-section {
-  /* Removed max-width/margin to inherit from global container */
   width: 100%;
   padding: 60px 0;
 }
@@ -57,6 +56,13 @@
   gap: 15px;
 }
 
+/* New wrapper to keep Role, Company, and Details grouped */
+.exp-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
+
 .exp-role {
   font-size: 20px;
   color: #ffffff;
@@ -72,6 +78,16 @@
   font-family: 'Courier New', monospace;
   display: block;
   margin-top: 5px;
+}
+
+/* Updated details to handle newlines natively */
+.details {
+  white-space: pre-line;
+  color: #a0a0a0; 
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
 }
 
 .exp-duration-tag {
@@ -103,7 +119,7 @@
 }
 
 .exp-bullet-item::before {
-  content: "[+]"; /* Changed from ▹ to a technical bracket */
+  content: "[+]"; 
   position: absolute;
   left: 0;
   color: #27c93f;
@@ -122,7 +138,7 @@
   color: #27c93f;
 }
 
-/* RESPONSIVE BREAKPOINT (Mobile) */
+/* RESPONSIVE BREAKPOINT (Tablets / Large Mobile) */
 @media (max-width: 768px) {
   .exp-node {
     gap: 15px;
@@ -130,7 +146,7 @@
 
   .exp-card-header {
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
   }
 
   .exp-role {
@@ -144,19 +160,24 @@
   .exp-duration-tag {
     align-self: flex-start;
     padding: 2px 8px;
+    margin-top: 5px;
   }
 }
 
+/* RESPONSIVE BREAKPOINT (Small Mobile) */
 @media (max-width: 480px) {
   .exp-rail {
     display: none;
   }
+  
   .exp-node {
     display: block;
   }
+  
   .exp-card-wrapper {
     padding-bottom: 40px;
-    border-left: 1px solid #1a1a1a;
+    border-left: 2px solid #1a1a1a;
     padding-left: 20px;
+    margin-left: 10px;
   }
 }

@@ -80,7 +80,6 @@
 }
 
 /* --- MOBILE RESPONSIVE FIXES --- */
-/* --- MOBILE RESPONSIVE FIXES --- */
 @media (max-width: 768px) {
   .manifest-grid { grid-template-columns: 1fr; }
   .school-container { flex-direction: column; text-align: center; padding: 40px 20px; }
